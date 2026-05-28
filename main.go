@@ -20,7 +20,7 @@ func main() {
 
 	fmt.Println(" ")
 
-	fmt.Printf("%s    /\\_/\\    %s%s%s@%sDesktop:%s\n", cyan, reset, bold, username, cyan, reset) // look like[Desktop: lxsh-S]
+	fmt.Printf("%s    /\\_/\\    %s%s%s@%sDesktop:%s\n", cyan, reset, bold, username, cyan, reset) // look like[lxsh-S@Desktop]
 	fmt.Printf("%s   ( o.o )   %s---------------------\n", cyan, reset)
 	fmt.Printf("%s    > ^ <    %s%sOS:%s       %s\n", cyan, reset, cyan, reset, OS) // look like[os: Arch linux]
 	fmt.Printf("%s   /     \\   %s\n", cyan, reset)

@@ -2,6 +2,7 @@ package src
 
 import (
 	"bufio"
+	"fmt"
 	"os"
 	"strings"
 )
@@ -10,7 +11,7 @@ import (
 func GetSystemKey(filePath, key string) string {
 	file, err := os.Open(filePath)
 	if err != nil {
-		return "Unkown error occured when opening the file"
+		return fmt.Sprintf("Unkown error occured when opening the file: %v", err) // Les clearly see whats the error
 	}
 	defer file.Close()
 
