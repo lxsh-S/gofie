@@ -1,25 +1,19 @@
 package src
 
 import (
-	"fmt"
-	"io"
-	"os"
+	_ "embed"
 )
 
+// i have noticed that there is a small delay in reading the ascii art so
+// From the docs i have got to know that embed bakes the file directly
+
+//go:embed data/ascii.txt
+var asciiData string
+
 func PrintASCII() string {
-	filePath := "src/data/ascii.txt"
-	file, err := os.Open(filePath) // search for ascii
-	if err != nil {
-		return fmt.Sprintf("error opening ASCII.txt: %v", err)
+	if asciiData == "" {
+		return "data/ascii.txt didn't load.." // Only when our ascii couldn't be loaded
 	}
-	defer file.Close()
-
-	ascii, err1 := io.ReadAll(file)
-	if err != nil {
-		return fmt.Sprintf("error reading ASCII.txt: %v", err1)
-	}
-
-	asciiString := string(ascii)
-
-	return asciiString
+	// skip if found
+	return asciiData
 }
