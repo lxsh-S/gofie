@@ -10,8 +10,8 @@ import (
 func main() {
 	//les get our data
 	//
-	OS := src.GetOSName()
-	username := src.GetUsername()
+	OS := src.GetOSNameDarwin()
+	username := src.GetUserNameDarwin()
 	ascii := src.PrintASCII()
 
 	// lets define terminal ANSI style
