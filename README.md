@@ -13,8 +13,11 @@ go run .
 ```
 
 # Plan
-- [ ] Printing OS name and username
-- [ ] Adding custom ASCII art
+- [x] Printing OS name and username
+- [x] Adding custom ASCII art
+- [x] Adding macOS support
+- [x] Learning to use "embed"
+- [ ] Map things cleanly side-by-side --Next  
 - [ ] Flag system (cobra)
 - [ ] Add memory used stat and cpu info
 - [ ] Storage stat
