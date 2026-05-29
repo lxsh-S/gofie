@@ -8,7 +8,7 @@ import (
 
 func PrintASCII() string {
 	filePath := "src/data/ascii.txt"
-	file, err := os.Open(filePath) // search for ascii
+	file, err := os.Open(filePath) // search for ascii file
 	if err != nil {
 		return fmt.Sprintf("error opening ASCII.txt: %v", err)
 	}
@@ -21,5 +21,5 @@ func PrintASCII() string {
 
 	asciiString := string(ascii)
 
-	return asciiString
+	return asciiString // returning string in the end.
 }
