@@ -15,7 +15,7 @@ func PrintASCII() string {
 	defer file.Close()
 
 	ascii, err1 := io.ReadAll(file)
-	if err != nil {
+	if err1 != nil {
 		return fmt.Sprintf("error reading ASCII.txt: %v", err1)
 	}
 
