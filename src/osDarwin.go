@@ -16,7 +16,7 @@ func GetOSNameDarwin() string { // We'll run "sw_vers"
 
 	version := strings.TrimSpace(string(out))
 
-	return "MacOS" + version
+	return "MacOS" + version // final string
 }
 
 func GetUserNameDarwin() string {
