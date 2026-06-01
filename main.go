@@ -4,6 +4,7 @@ package main
 import (
 	"fmt"
 	"runtime"
+	"strings"
 
 	"github.com/lxsh-S/gofie/src"
 )
@@ -14,7 +15,9 @@ func main() {
 	bold := "\033[1m"  // bold text
 	reset := "\033[0m" // clear all things
 
-	// les get our data and
+	asciiBlock := src.PrintASCII()
+	asciiLines := strings.Split(asciiBlock, "\n")
+
 	// Print it accordinf to the User's OS.
 	switch runtime.GOOS {
 	case "darwin":
