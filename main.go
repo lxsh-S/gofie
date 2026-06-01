@@ -19,21 +19,18 @@ func main() {
 	asciiBlock := src.PrintASCII()
 	asciiLines := strings.Split(asciiBlock, "\n")
 
-	// Print it accordinf to the User's OS.
+	//"Not the best way to fetch data" --> "I know" :)
 	switch runtime.GOOS {
 	case "darwin":
 
+		// Les get info
 		OS := src.GetOSNameDarwin()
 		username := src.GetUserNameDarwin()
-		// ascii := src.PrintASCII()
-		// fmt.Println(ascii)
 
 		infolines := []string{
 			fmt.Sprintf("%s%s@%sDesktop:%s", bold, username, red, reset),
 			"------------------",
 			fmt.Sprintf("%sOS:%s %s%s%s%s", red, reset, bold, cyan, OS, reset),
-			// fmt.Sprintf("%sCPU:%s %s%s%s%s"), //empty for now
-			// fmt.Sprintf("%sMemory:%s %s%s%s%s"), //Same
 		}
 		fmt.Println(" ")
 
@@ -61,25 +58,15 @@ func main() {
 		}
 		fmt.Println(" ")
 
-		// fmt.Printf("%s%s%s%s@%sDesktop:%s\n", cyan, reset, bold, username, cyan, reset)
-		// fmt.Printf("%s%s---------------------\n", cyan, reset)
-		// fmt.Printf("%sOS:%s%s       %s\n", cyan, reset,red, OS)
-		// fmt.Println(" ")
-		// fmt.Println(" ")
-		//
 	case "linux":
 
 		OS := src.GetOsName()
 		username := src.GetUserName()
-		// ascii := src.PrintASCII()
-		// fmt.Println(ascii)
 
 		infolines := []string{
 			fmt.Sprintf("%s%s@%sDesktop:%s", bold, username, red, reset),
 			"------------------",
 			fmt.Sprintf("%sOS:%s %s%s%s%s", red, reset, bold, cyan, OS, reset),
-			// fmt.Sprintf("%sCPU:%s %s%s%s%s"), //empty for now
-			// fmt.Sprintf("%sMemory:%s %s%s%s%s"), //Same
 		}
 		fmt.Println(" ")
 
@@ -107,12 +94,5 @@ func main() {
 		}
 		fmt.Println(" ")
 
-		// fmt.Println(" ")
-
-		// fmt.Printf("%s%s%s%s@%sDesktop:%s\n", cyan, reset, bold, username, cyan, reset)
-		// fmt.Printf("%s%s---------------------\n", cyan, reset)
-		// fmt.Printf("%s%s%sOS:%s       %s\n", cyan, reset, cyan, reset, OS)
-		// fmt.Println(" ")
-		// fmt.Println(" ")
 	}
 }
