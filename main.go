@@ -26,11 +26,17 @@ func main() {
 		// Les get info
 		OS := src.GetOSNameDarwin()
 		username := src.GetUserNameDarwin()
+		CPU := src.GetCPU()
+		MemUsed := src.GETMemoryUsed()
+		MemTotal := src.GETMemoryTotal()
 
 		infolines := []string{
-			fmt.Sprintf("%s%s@%sDesktop:%s", bold, username, red, reset),
-			"------------------",
+			fmt.Sprintf("%s%s%s@%s%sDesktop:%s", bold, cyan, username, reset, red, reset),
+			"--------------------------------",
 			fmt.Sprintf("%sOS:%s %s%s%s%s", red, reset, bold, cyan, OS, reset),
+
+			fmt.Sprintf("%sCPU:%s %s%s%s%s", red, reset, bold, cyan, CPU, reset),
+			fmt.Sprintf("%sMemory:%s %s%s%s%s", red, reset, bold, cyan, MemUsed+"/"+MemTotal, reset),
 		}
 		fmt.Println(" ")
 
@@ -45,6 +51,7 @@ func main() {
 			asciiPar := ""
 			infoPar := ""
 
+			// We'll safely grab the ascii and info lines instead of crashin
 			if i < len(asciiLines) {
 				asciiPar = asciiLines[i]
 			}
@@ -62,11 +69,16 @@ func main() {
 
 		OS := src.GetOsName()
 		username := src.GetUserName()
+		CPU := src.GetCPU()
+		MemUsed := src.GETMemoryUsed()
+		MemTotal := src.GETMemoryTotal()
 
 		infolines := []string{
 			fmt.Sprintf("%s%s@%sDesktop:%s", bold, username, red, reset),
 			"------------------",
 			fmt.Sprintf("%sOS:%s %s%s%s%s", red, reset, bold, cyan, OS, reset),
+			fmt.Sprintf("%sCPU:%s %s%s%s%s", red, reset, bold, cyan, CPU, reset),
+			fmt.Sprintf("%sMemory:%s %s%s%s%s", red, reset, bold, cyan, MemUsed+"/"+MemTotal, reset),
 		}
 		fmt.Println(" ")
 
