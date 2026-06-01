@@ -18,9 +18,8 @@ go run .
 - [x] Adding macOS support
 - [x] Learning to use "embed"
 - [x] Map things cleanly side-by-side
-- [ ] Clean the code --Next
+- [x] Add memory used stat and cpu info
 - [ ] Flag system (cobra)
-- [ ] Add memory used stat and cpu info
 - [ ] Storage stat
 - [ ] Terminal info
 - [ ] Current font

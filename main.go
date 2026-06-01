@@ -101,8 +101,7 @@ func main() {
 				infoPar = infolines[i]
 			}
 
-			fmt.Printf("%-55s   %s\n", asciiPar, infoPar) // we'll print it left side and fill spaces too
-
+			fmt.Printf("%-55s   %s\n", asciiPar, infoPar) 
 		}
 		fmt.Println(" ")
 
