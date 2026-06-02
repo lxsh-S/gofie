@@ -24,10 +24,5 @@ go run .
 - [x] Map things cleanly side-by-side
 - [x] Add memory used stat and cpu info
 - [x] Flag system (cobra)
-- [ ] Storage stat
-- [ ] Terminal info
-- [ ] Current font
-- [ ] WM(window manager info)
-- [ ] Uptime info
-More to think....
+
 
