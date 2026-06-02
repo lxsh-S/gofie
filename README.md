@@ -1,7 +1,8 @@
 # Gofie
+A simple system information tool written in golang.
 
 # Design Choices and Goals
-gofie is not intended to compete with fastfetch or any system information tool.
+Gofie is not intended to compete with fastfetch or any system information tool.
 It is a fun hobby project
 
 # Installation
@@ -10,6 +11,10 @@ It is a fun hobby project
 git clone https://github.com/lxsh-S/gofie.git
 cd gofie.git
 go run .
+```
+** Execute build file **
+```
+./build/gofie
 ```
 
 # Plan
