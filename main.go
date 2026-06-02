@@ -20,10 +20,10 @@ func main() {
 
 // Base command without any subcommands (rootCmd)
 var rootCmd = &cobra.Command{
-	Use:   "gofie",
-	Short: "Gofie is a macos/linux only system fetch tool",
-	Long:  "A lightweight system information tool written in Go, that display system fetch data instantly",
-
+	Use:     "gofie",
+	Short:   "Gofie is a macos/linux only system fetch tool",
+	Long:    "A lightweight system information tool written in Go, that display system fetch data instantly",
+	Version: "v0.6.5",
 	// When "./gofie"
 	Run: func(cmd *cobra.Command, args []string) {
 		FetchingEngine() // Will be more readible for me like this

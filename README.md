@@ -24,7 +24,7 @@ go run .
 - [x] Learning to use "embed"
 - [x] Map things cleanly side-by-side
 - [x] Add memory used stat and cpu info
-- [ ] Flag system (cobra)
+- [x] Flag system (cobra)
 - [ ] Storage stat
 - [ ] Terminal info
 - [ ] Current font
