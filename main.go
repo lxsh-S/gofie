@@ -40,7 +40,7 @@ func FetchingEngine() {
 	asciiBlock := src.PrintASCII()
 	asciiLines := strings.Split(asciiBlock, "\n")
 
-	//"Not the best way to fetch data" --> "I know" :)
+	//"Not the best way to fetch data" --> "I know" will see later:)
 	switch runtime.GOOS {
 	case "darwin":
 
@@ -50,6 +50,9 @@ func FetchingEngine() {
 		CPU := src.GetCPU()
 		MemUsed := src.GETMemoryUsed()
 		MemTotal := src.GETMemoryTotal()
+		DiskTotal := src.GetDiskTotal()
+		DiskUsed := src.GetDiskUsed()
+		GPU := src.GetGPU()
 
 		infolines := []string{
 			fmt.Sprintf("%s%s%s@%s%sDesktop:%s", bold, cyan, username, reset, red, reset),
@@ -57,7 +60,9 @@ func FetchingEngine() {
 			fmt.Sprintf("%sOS:%s %s%s%s%s", red, reset, bold, cyan, OS, reset),
 
 			fmt.Sprintf("%sCPU:%s %s%s%s%s", red, reset, bold, cyan, CPU, reset),
+			fmt.Sprintf("%sGPU:%s %s%s%s%s", red, reset, bold, cyan, GPU, reset),
 			fmt.Sprintf("%sMemory:%s %s%s%s%s", red, reset, bold, cyan, MemUsed+"/"+MemTotal, reset),
+			fmt.Sprintf("%sDisk:%s %s%s%s%s", red, reset, bold, cyan, DiskUsed+"/"+DiskTotal, reset),
 		}
 		fmt.Println(" ")
 
@@ -93,13 +98,18 @@ func FetchingEngine() {
 		CPU := src.GetCPU()
 		MemUsed := src.GETMemoryUsed()
 		MemTotal := src.GETMemoryTotal()
+		DiskTotal := src.GetDiskTotal()
+		DiskUsed := src.GetDiskUsed()
+		GPU := src.GetGPU()
 
 		infolines := []string{
 			fmt.Sprintf("%s%s@%sDesktop:%s", bold, username, red, reset),
 			"------------------",
 			fmt.Sprintf("%sOS:%s %s%s%s%s", red, reset, bold, cyan, OS, reset),
 			fmt.Sprintf("%sCPU:%s %s%s%s%s", red, reset, bold, cyan, CPU, reset),
+			fmt.Sprintf("%sGPU:%s %s%s%s%s", red, reset, bold, cyan, GPU, reset),
 			fmt.Sprintf("%sMemory:%s %s%s%s%s", red, reset, bold, cyan, MemUsed+"/"+MemTotal, reset),
+			fmt.Sprintf("%sDisk:%s %s%s%s%s", red, reset, bold, cyan, DiskUsed+"/"+DiskTotal, reset),
 		}
 		fmt.Println(" ")
 
