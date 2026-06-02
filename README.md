@@ -1,6 +1,10 @@
 # Gofie
 A simple system information tool written in golang.
 
+
+<img width="826" height="1008" alt="demo" src="https://github.com/user-attachments/assets/1df3f418-c02d-4c84-8e7b-2f3a7bdd029e" />
+
+
 # Design Choices and Goals
 Gofie is not intended to compete with fastfetch or any system information tool.
 It is a fun hobby project
